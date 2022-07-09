@@ -21,17 +21,6 @@ def predict_postman():
     return jsonify(output_data_array)
 
 
-#@app.route('/predict', methods=['POST'])
-#def predict():
-#    data = [float(x) for x in request.form.values()]
-#    final_features = [np.array(data)]
-#    print(data)
-#    output = model.predict(final_features)[0]
-#    print(output)
-#    return render_template('home.html', prediction_text="Airfoil Pressure is {}".format(output))
-
-
-@app.route('/predict', methods=['POST'])
 def predict():
     data = [float(x) for x in request.form.values()]
     final_features = [np.array(data)]
